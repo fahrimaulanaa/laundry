@@ -21,8 +21,8 @@ if($_SESSION['level']==""){
             <h1 class="text-3xl font-bold mb-10">Form Edit Transaksi</h1>
             <form action="edit-transaksi.php" method="POST">
                 <?php
-                $id = $_GET['id_transaksi'];
-                $data = mysqli_query($koneksi,"SELECT * FROM transaksi WHERE id_transaksi='$id'");
+                $id_transaksi = $_GET['id_transaksi'];
+                $data = mysqli_query($koneksi,"SELECT * FROM transaksi WHERE id_transaksi='$id_transaksi'");
                 while($d = mysqli_fetch_array($data)){
                 ?>
                 <div class="mb-5">
@@ -34,7 +34,7 @@ if($_SESSION['level']==""){
                     <input type="text" name="nama_customer" id="nama" value="<?php echo $d['nama_customer']; ?>" class="border border-gray-300 p-2 w-full rounded">
                 </div>
                 <div class="mb-5">
-                    <label for="tgl" class="block mb-2 text-sm text-gray-600">Tanggal</label>
+                    <label for="tgl" class="block mb-2 text-sm text-gray-600">Tanggal Diterima</label>
                     <input type="date" name="tanggal_transaksi" id="tgl" value="<?php echo $d['tanggal_transaksi']; ?>" class="border border-gray-300 p-2 w-full rounded">
                 </div>
                 <div class="mb-5">
@@ -45,7 +45,7 @@ if($_SESSION['level']==""){
                         <option value="pengeringan">Pengeringan</option>
                         <option value="setrika">Disetrika</option>
                         <option value="selesai">Selesai</option>
-                    </select>
+                    </select> 
                 </div>
                 <div class="mb-5">
                     <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded font-medium w-full" name="update">Update</button>
@@ -65,7 +65,11 @@ if(isset($_POST['update'])){
     $nama_customer = $_POST['nama_customer'];
     $tanggal_transaksi = $_POST['tanggal_transaksi'];
     $status = $_POST['status'];
-    mysqli_query($koneksi,"UPDATE transaksi SET nama_customer='$nama_customer', tanggal_transaksi='$tanggal_transaksi', status='$status' WHERE id_transaksi='$id_transaksi'");
-    header("location:daftar-transaksi.php");
+    $update = mysqli_query($koneksi,"UPDATE transaksi SET nama_customer='$nama_customer', tanggal_transaksi='$tanggal_transaksi', status='$status' WHERE id_transaksi='$id_transaksi'");  
+    if($update){
+        header("location:transaksi.php");
+    }else{
+        echo "Gagal";
+    }
 }
 ?>
