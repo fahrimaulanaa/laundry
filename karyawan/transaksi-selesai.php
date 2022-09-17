@@ -1,7 +1,6 @@
 <?php
 session_start();
 include "../connect.php";
-// if user is not have session then redirect to login page
 if (!isset($_SESSION['username'])) {
     header("location:../security/form-login.php");
 }
@@ -17,6 +16,7 @@ if (!isset($_SESSION['username'])) {
 </head>
 <body>
     <div class="flex">
+    <div class="flex">
         <div class="w-1/5 bg-gray-800 h-screen">
             <div class="flex items-center justify-center h-20">
                 <div class="flex items-center">
@@ -24,29 +24,30 @@ if (!isset($_SESSION['username'])) {
                     <span class="text-white font-semibold text-2xl">Karyawan</span>
                 </div>
             </div>
-            <nav class="text-white text-base font-semibold pt-3">
-                <a href="index.php" class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item">
+            <hr class="border-white">
+            <nav class="text-white text-base font-semibold pt-3 ">
+                <a href="transaksi-berlangsung.php" class="  flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item">
                     <i class="fas fa-tachometer-alt mr-3"></i>
-                    Dashboard
+                    Transaksi Berlangsung
                 </a>
-                <a href="transaksi-selesai.php" class="flex items-center text-white py-4 pl-6 nav-item">
+                <a href="transaksi-selesai.php" class=" font-bold flex items-center text-white opacity-100 hover:opacity-100 py-4 pl-6 nav-item">
                     <i class="fas fa-users mr-3"></i>
                     Transaksi Selesai
                 </a>
-                <a href="transaksi-belumselesai.php" class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item">
+                <a href="transaksi-dibatalkan.php" class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item">
                     <i class="fas fa-list mr-3"></i>
-                    Transaksi Belum Selesai
+                    Transaksi Dibatalkan
                 </a>
-                <a href="pengaturan.php" class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item">
+                <a href="manage-food.php" class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item">
                     <i class="fas fa-utensils mr-3"></i>
-                    Pengaturan
+                    Transaksi Belum Diproses
                 </a>
                 <a href="../security/logout.php" class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item">
                     <i class="fas fa-sign-out-alt mr-3"></i>
                     Logout
                 </a>
             </nav>
-        </div>  
+        </div> 
         <div class="w-4/5">
         <div class="flex justify-between items-center">
             <h1 class="text-3xl font-semibold items-center justify-center" align="center">Transaksi Selesai</h1>
@@ -64,13 +65,15 @@ if (!isset($_SESSION['username'])) {
                         <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Tanggal Transaksi</th>
                         <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Total Transaksi</th>
                         <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Status Pesanan</th>
-                        <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Tanggal Masuk</th>  
+                        <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Tanggal Masuk</th> 
+                        <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Karyawan</th> 
                     </tr>
                 </thead>
                 <tbody class="text-gray-700">
                     <?php
                     $no = 1;
-                    $query = mysqli_query($koneksi, "SELECT * FROM transaksi WHERE status = 'Selesai'");
+                    // select * FROM transaksi WHERE status = selesai
+                    $query = mysqli_query($koneksi, "SELECT * FROM transaksi WHERE status = 'selesai'");
                     while ($data = mysqli_fetch_array($query)) {
                     ?>
                         <tr class="border border-b-0">

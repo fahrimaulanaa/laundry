@@ -563,6 +563,10 @@ video {
   right: 0px;
 }
 
+.top-0 {
+  top: 0px;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -617,6 +621,10 @@ video {
   margin-top: 1.25rem;
 }
 
+.ml-2 {
+  margin-left: 0.5rem;
+}
+
 .block {
   display: block;
 }
@@ -653,6 +661,14 @@ video {
   height: 2rem;
 }
 
+.h-full {
+  height: 100%;
+}
+
+.h-4 {
+  height: 1rem;
+}
+
 .w-1\/5 {
   width: 20%;
 }
@@ -679,6 +695,14 @@ video {
 
 .w-48 {
   width: 12rem;
+}
+
+.w-64 {
+  width: 16rem;
+}
+
+.w-4 {
+  width: 1rem;
 }
 
 .max-w-7xl {
@@ -834,6 +858,10 @@ video {
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
 }
 
+.fill-current {
+  fill: currentColor;
+}
+
 .p-10 {
   padding: 2.5rem;
 }
@@ -899,6 +927,14 @@ video {
 
 .pr-1 {
   padding-right: 0.25rem;
+}
+
+.pl-10 {
+  padding-left: 2.5rem;
+}
+
+.pr-4 {
+  padding-right: 1rem;
 }
 
 .text-left {
@@ -999,6 +1035,11 @@ video {
   color: rgb(31 41 55 / var(--tw-text-opacity));
 }
 
+.text-gray-500 {
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity));
+}
+
 .opacity-75 {
   opacity: 0.75;
 }
@@ -1009,6 +1050,14 @@ video {
 
 .opacity-100 {
   opacity: 1;
+}
+
+.opacity-0 {
+  opacity: 0;
+}
+
+.opacity-5 {
+  opacity: 0.05;
 }
 
 .shadow-2xl {
@@ -1082,6 +1131,10 @@ video {
 
 .hover\:opacity-100:hover {
   opacity: 1;
+}
+
+.hover\:opacity-10:hover {
+  opacity: 0.1;
 }
 
 .focus\:outline-none:focus {

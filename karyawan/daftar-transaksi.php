@@ -76,7 +76,7 @@ if (!isset($_SESSION['username'])) {
                 <div class="p-5">
                     <?php
                     include "../connect.php";
-                    $sql = "SELECT * FROM  transaksi WHERE status = 'batal'";
+                    $sql = "SELECT * FROM  transaksi WHERE status = 'dibatalkan'";
                     $result = mysqli_query($koneksi, $sql);
                     $resultCheck = mysqli_num_rows($result);
                     ?>
@@ -118,7 +118,6 @@ if (!isset($_SESSION['username'])) {
     <br>
     <br>
     <hr>
-    <!-- transaksi masuk dan belum diproses -->
     <div class="flex flex-wrap justify-center" id="transaksi-masuk">
         <div class="w-full p-4">
             <div class="bg-white border rounded shadow">
@@ -126,42 +125,72 @@ if (!isset($_SESSION['username'])) {
                     <h5 class="font-bold uppercase text-gray-600">Transaksi Masuk</h5>
                 </div>
                 <div class="p-5">
-                    <table class="w-full p-5 text-gray-700" rowspan="7" colspan="7">
-                        <thead>
+                <table class="w-full bg-white">
+                <thead class="border-b bg-gray-800">
+                    <tr class="text-white text-left">
+                        <th class="font-semibold text-sm uppercase px-6 py-4">
+                            No
+                        </th>
+                        <th class="font-semibold text-sm uppercase px-6 py-4">
+                            Id Transaksi
+                        </th>
+                        <th class="font-semibold text-sm uppercase px-6 py-4">
+                            Nama Customer
+                        </th>
+                        <th class="font-semibold text-sm uppercase px-6 py-4">
+                            Harga
+                        </th>
+                        <th class="font-semibold text-sm uppercase px-6 py-4">
+                            Tanggal
+                        </th>
+                        <th class="font-semibold text-sm uppercase px-6 py-4">
+                            Status
+                        </th>
+                        <th class="font-semibold text-sm uppercase px-6 py-4">
+                            Aksi
+                        </th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-200">
+                    <?php
+                    $sql = "SELECT * FROM transaksi WHERE status = '' OR status = 'belum diproses' ORDER BY id_transaksi DESC";
+                    $result = mysqli_query($koneksi, $sql);
+                    $no = 1;
+                    if (mysqli_num_rows($result) > 0) {
+                        while ($row = mysqli_fetch_assoc($result)) {
+                    ?>
                             <tr>
-                                <th class="text-left text-blue-900">No</th>
-                                <th class="text-left text-blue-900">Nama Customer</th>
-                                <th class="text-left text-blue-900">ID Transaksi</th>
-                                <th class="text-left text-blue-900">Tanggal Transaksi</th>
-                                <th class="text-left text-blue-900">Harga</th>
-                                <th class="text-left text-blue-900">Status</th>
-                                <th class="text-left text-blue-900">Aksi</th>
+                                <td class="px-6 py-4">
+                                    <?php echo $no++; ?>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <?php echo $row['id_transaksi']; ?>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <?php echo $row['nama_customer']; ?>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <?php echo $row['total_transaksi']; ?>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <?php echo $row['tanggal_transaksi']; ?>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <?php echo $row['status'] == '' ? 'Belum Diproses' : $row['status']; ?>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <!-- make green proses button and red batalkan button -->
+                                    <a href="daftar-transaksi.php?id=<?php echo $row['id_transaksi']; ?>" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded" target="blank">Proses</a>
+                                    <a href="batal.php?id=<?php echo $row['id_transaksi']; ?>" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded" target="blank">Batalkan</a>
+                                </td>
                             </tr>
-                        </thead>
-                        <tbody>
-                            <?php
-                            include "../connect.php";
-                            $sql = "SELECT * FROM transaksi WHERE status = 'belum diproses' OR status = '' ";
-                            $result = mysqli_query($koneksi, $sql);
-                            $resultCheck = mysqli_num_rows($result);
-                            if ($resultCheck > 0) {
-                                $no = 1;
-                                while ($row = mysqli_fetch_assoc($result)) {
-                                    echo "<tr>";
-                                    echo "<td>" . $no . "</td>";
-                                    echo "<td>" . $row['nama_customer'] . "</td>";
-                                    echo "<td>" . $row['id_transaksi'] . "</td>";
-                                    echo "<td>" . $row['tanggal_transaksi'] . "</td>";
-                                    echo "<td>" . $row['total_transaksi'] . "</td>";
-                                    echo "<td>" . $row['status'] . "</td>";
-                                    echo "<td><a href='daftar-transaksi.php?id_transaksi=" . $row['id_transaksi'] . "' class=' text-black font-bold py-2 px-4 rounded-full' target='blank'>Proses</a></td>";
-                                    echo "</tr>";
-                                    $no++;
-                                }
-                            }
-                            ?>
-                        </tbody>
-                    </table>
+                    <?php
+                            $no++;
+                        }
+                    }
+                    ?>
+                </tbody>
+            </table>
                 </div>
             </div>
         </div>
@@ -170,15 +199,14 @@ if (!isset($_SESSION['username'])) {
 </html>
 <?php
 include "../connect.php";
-
-if(isset($_GET['id_transaksi'])){
-    $id_transaksi = $_GET['id_transaksi'];
-    $sql = "UPDATE transaksi SET status = 'diproses' WHERE id_transaksi = '$id_transaksi'";
+if (isset($_GET['id'])) {
+    $id = $_GET['id'];
+    $sql = "UPDATE transaksi SET status = 'diproses' WHERE id_transaksi = '$id'";
     $result = mysqli_query($koneksi, $sql);
-    if($result){
-        echo "<script>alert('Transaksi berhasil diproses');window.location.href='daftar-transaksi.php';</script>";
-    }else{
-        echo "<script>alert('Transaksi gagal diproses');window.location.href='daftar-transaksi.php';</script>";
+    if ($result) {
+        echo "<script>alert('Transaksi berhasil diproses!');window.location.href='daftar-transaksi.php';</script>";
+    } else {
+        echo "<script>alert('Transaksi gagal diproses!');window.location.href='daftar-transaksi.php';</script>";
     }
 }
 ?>

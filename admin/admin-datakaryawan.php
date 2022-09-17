@@ -58,12 +58,14 @@ include "../connect.php";
                     <tr class="text-left border-b-2 border-gray-300">
                         <th class="px-4 py-3">No</th>
                         <th class="px-4 py-3">Nama</th>
+                        <th class="px-4 py-3">Posisi</th>
                         <th class="px-4 py-3">Hak Akses</th>
                         <th class="px-4 py-3">Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php
+                    // select * FROM karyawan and select karyawan level from user table
                     $sql = "SELECT * FROM karyawan";
                     $res = mysqli_query($koneksi, $sql);
                     $count = mysqli_num_rows($res);
@@ -72,10 +74,12 @@ include "../connect.php";
                         while ($row = mysqli_fetch_assoc($res)) {
                             $id = $row['id_karyawan'];
                             $full_name = $row['nama_karyawan'];
+                            $posisi = $row['posisi_karyawan'];
                     ?>
                             <tr class="border-b border-gray-200 hover:bg-gray-100">
                                 <td class="px-4 py-3"><?php echo $no++; ?></td>
                                 <td class="px-4 py-3"><?php echo $full_name; ?></td>
+                                <td class="px-4 py-3"><?php echo $posisi; ?></td>
                                 <td class="px-4 py-3"><?php echo $row['akses']; ?></td>
                                 <td class="px-4 py-3">
                                     <a href="update-admin.php?id_karyawan=<?php echo $id; ?>" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Ubah</a>
