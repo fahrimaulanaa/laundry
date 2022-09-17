@@ -26,7 +26,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- user settings in right -->
                 <div class="hidden md:block">
                     <div class="ml-4 flex items-center md:ml-6">
                         <div class="ml-3 relative">
@@ -36,7 +35,7 @@
                                 </button>
                             </div>
                             <div class="hidden origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5" role="menu" aria-orientation="vertical" aria-labelledby="user-menu" id="user-settings">
-                                <a href="logout.php" class="block px-4 py-2 text-sm text-gray-700" role="menuitem">Logout</a>
+                                <a href="../security/logout.php" class="block px-4 py-2 text-sm text-gray-700" role="menuitem">Logout</a>
                             </div>
                         </div>
                     </div>

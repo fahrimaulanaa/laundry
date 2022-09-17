@@ -20,8 +20,9 @@ if (!isset($_SESSION['username'])) {
 </head>
 
 <body>
+    <script src="../javascript/index.js"></script>
     <br>
-    <div class="flex flex-wrap justify-center" id="transaksi-beralngsung">
+    <div class=" flex flex-wrap justify-center" id="transaksi-berlangsung">
         <div class="w-1/4 p-4">
             <div class="bg-white border rounded shadow">
                 <div class="border-b p-3">
@@ -99,7 +100,7 @@ if (!isset($_SESSION['username'])) {
                 <div class="p-5">
                     <?php
                     include "../connect.php";
-                    $sql = "SELECT * FROM  transaksi WHERE status = 'belum diproses' OR status = ''";
+                    $sql = "SELECT * FROM  transaksi WHERE status = 'belum diproses' OR status = '' ";
                     $result = mysqli_query($koneksi, $sql);
                     $resultCheck = mysqli_num_rows($result);
                     ?>
@@ -179,7 +180,6 @@ if (!isset($_SESSION['username'])) {
                                     <?php echo $row['status'] == '' ? 'Belum Diproses' : $row['status']; ?>
                                 </td>
                                 <td class="px-6 py-4">
-                                    <!-- make green proses button and red batalkan button -->
                                     <a href="daftar-transaksi.php?id=<?php echo $row['id_transaksi']; ?>" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded" target="blank">Proses</a>
                                     <a href="batal.php?id=<?php echo $row['id_transaksi']; ?>" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded" target="blank">Batalkan</a>
                                 </td>

@@ -25,10 +25,10 @@ if($cek > 0){
 		$_SESSION['level'] = "karyawan";
 		header("location:../karyawan/daftar-transaksi.php");
  
-	}else if($data['level']=="pengurus"){
+	}else if($data['level']=="user"){
 		$_SESSION['username'] = $username;
-		$_SESSION['level'] = "pengurus";
-		header("location:halaman_pengurus.php");
+		$_SESSION['level'] = "user";
+		header("location:../client/dashboard.php");
  
 	}else{
  

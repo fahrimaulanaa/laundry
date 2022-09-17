@@ -1,6 +1,17 @@
+<?php
+session_start();
+if (isset($_SESSION['level'])) {
+    if ($_SESSION['level'] == "admin") {
+        header("location:../admin/admin-datakaryawan.php");
+    } else if ($_SESSION['level'] == "karyawan") {
+        header("location:../karyawan/daftar-transaksi.php");
+    }else{
+        header("location:../client/template.php");
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +19,6 @@
     <link rel="stylesheet" href="../css/style.css">
     <title>Login</title>
 </head>
-
 <body>
     <script src="../javascript/index.js"></script>
     <div class="flex items-center justify-center h-screen">
