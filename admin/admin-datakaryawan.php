@@ -1,6 +1,14 @@
 <?php
 session_start();
 include "../connect.php";
+
+if ($_SESSION['level'] == "admin") {
+    header("location:../admin/dashboard.php");
+}else if($_SESSION['level'] == "karyawan"){
+    header("location:../karyawan/daftar-transaksi.php");
+}else if($_SESSION['level'] == "user"){
+    header("location:../client/dashboard.php");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -22,7 +22,8 @@ if($cek > 0){
 	}else if($data['level']=="user"){
 		header("location:../client/dashboard.php");
 	}
+}else if(empty($username) || empty($password)){
+	echo "<script>alert('Username atau Password tidak boleh kosong!');window.location.href='../security/form-login.php';</script>";
 }else{
-	echo "<script>alert('Username atau Password salah!');window.location='../security/form-login.php'</script>";
-	header("location:../security/form-login.php");
+	echo "<script>alert('Username atau Password salah!');window.location.href='../security/form-login.php';</script>";
 }

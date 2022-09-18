@@ -4267,6 +4267,16 @@ textarea.form-control.is-invalid {
   background-color: rgb(240 253 244 / var(--tw-bg-opacity));
 }
 
+.bg-green-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(220 252 231 / var(--tw-bg-opacity));
+}
+
+.bg-red-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 226 226 / var(--tw-bg-opacity));
+}
+
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
@@ -4339,6 +4349,11 @@ textarea.form-control.is-invalid {
 .px-1 {
   padding-left: 0.25rem;
   padding-right: 0.25rem;
+}
+
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
 }
 
 .pt-3 {
@@ -4539,6 +4554,16 @@ textarea.form-control.is-invalid {
   color: rgb(59 130 246 / var(--tw-text-opacity));
 }
 
+.text-red-500 {
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity));
+}
+
+.text-red-700 {
+  --tw-text-opacity: 1;
+  color: rgb(185 28 28 / var(--tw-text-opacity));
+}
+
 .underline {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
@@ -4670,6 +4695,14 @@ textarea.form-control.is-invalid {
 
 .focus\:ring-offset-gray-800:focus {
   --tw-ring-offset-color: #1f2937;
+}
+
+.disabled\:cursor-help:disabled {
+  cursor: help;
+}
+
+.disabled\:cursor-no-drop:disabled {
+  cursor: no-drop;
 }
 
 @media (min-width: 640px) {

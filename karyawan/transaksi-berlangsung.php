@@ -107,7 +107,7 @@ include "../connect.php";
                                     <?php echo $row['status']; ?>
                                 </td>
                                 <td class="px-6 py-4">
-                                    <a href="transaksi-berlangsung.php?id_transaksi=<?php echo $row['id_transaksi']; ?>" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Selesai</a>
+                                    <a href="selesaikan-transaksi.php?id_transaksi=<?php echo $row['id_transaksi']; ?>" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Selesai</a>
                                 </td>
                             </tr>
                     <?php
@@ -122,20 +122,3 @@ include "../connect.php";
     </div>
 </body>
 </html>
-<?php
-include "../connect.php";
-
-if (isset($_GET['id_transaksi'])) {
-    $id = $_GET['id_transaksi'];
-    $user = $_SESSION['username'];
-    $sql1 = "UPDATE transaksi SET status = 'selesai' WHERE id_transaksi = '$id'";
-    $sql2 = "UPDATE user SET status = 'kosong' WHERE username = '$user'";
-    $result1 = mysqli_query($koneksi, $sql1);
-    $result2 = mysqli_query($koneksi, $sql2);
-    if ($result1 && $result2) {
-        echo "<script>alert('Transaksi Berhasil');window.location.href='transaksi-berlangsung.php';</script>";
-    } else {
-        echo "<script>alert('Transaksi Gagal');window.location.href='transaksi-berlangsung.php';</script>";
-    }
-}
-?>

@@ -2,6 +2,10 @@
 session_start();
 $user = $_SESSION['username'];
 include "../connect.php";
+
+if (!isset($_SESSION['username'])) {
+    header("Location: ../security/form-login.php");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -36,8 +40,8 @@ include "../connect.php";
                     <div class="ml-4 flex items-center md:ml-6">
                         <div class="ml-3 relative">
                             <div>
-                                <button class="max-w-xs flex items-center text-sm rounded-full text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" id="user-menu" aria-haspopup="true" onclick="showSettings()">
-                                    <img class="h-8 w-8 rounded-full" src="../assets/user-icon.png" alt="">
+                                <button class="max-w-xs flex items-center text-sm  text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" id="user-menu" aria-haspopup="true" onclick="showSettings()">
+                                    <img class="h-8 w-8 rounded" src="../assets/user-icon.png" alt="">
                                 </button>
                             </div>
                             <div class="hidden origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5" role="menu" aria-orientation="vertical" aria-labelledby="user-menu" id="user-settings">
@@ -67,7 +71,7 @@ include "../connect.php";
                     <p class="text-gray-700 text-base mb-4">
                         <?php
                         $user = $_SESSION['username'];
-                        $query = "SELECT * FROM $user";
+                        $query = "SELECT * FROM transaksi WHERE nama_customer = '$user' ORDER BY id_transaksi DESC LIMIT 1";
                         $result = mysqli_query($koneksi, $query);
                         $row = mysqli_fetch_assoc($result);
                         if(empty($row)){
@@ -81,6 +85,8 @@ include "../connect.php";
                             echo "<a href='print-invoice.php' class='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'>Print Invoice</a>";
                         }else if($row['status'] == "belum diproses"){
                             echo "Pesanan anda belum diproses, silahkan tunggu";
+                        }else{
+                            echo "Pesanan anda dibatalkan";
                         }
                         ?>
                     </p>
