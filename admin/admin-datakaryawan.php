@@ -8,6 +8,8 @@ if ($_SESSION['level'] == "admin") {
     header("location:../karyawan/daftar-transaksi.php");
 }else if($_SESSION['level'] == "user"){
     header("location:../client/dashboard.php");
+}else{
+    echo "<script>alert('Username atau Password salah!');window.location.href='../security/form-login.php';</script>";
 }
 ?>
 <!DOCTYPE html>
@@ -73,7 +75,6 @@ if ($_SESSION['level'] == "admin") {
                 </thead>
                 <tbody>
                     <?php
-                    // select * FROM karyawan and select karyawan level from user table
                     $sql = "SELECT * FROM karyawan";
                     $res = mysqli_query($koneksi, $sql);
                     $count = mysqli_num_rows($res);

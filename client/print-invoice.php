@@ -20,7 +20,8 @@ $pdf->Cell(27, 6, 'Berat', 1, 0);
 $pdf->Cell(25, 6, 'Total', 1, 1);
 $pdf->SetFont('Arial', '', 10);
 $no = 1;
-$query = mysqli_query($koneksi, "SELECT * FROM transaksi");
+$user = $_SESSION['username'];
+$query = mysqli_query($koneksi, "SELECT * FROM $user ORDER BY id_transaksi DESC LIMIT 1");
 while ($row = mysqli_fetch_array($query)) {
     $pdf->Cell(10, 6, $no++, 1, 0);
     $pdf->Cell(25, 6, $row['tanggal_transaksi'], 1, 0);
@@ -28,7 +29,6 @@ while ($row = mysqli_fetch_array($query)) {
     $pdf->Cell(27, 6, $row['berat'], 1, 0);
     $pdf->Cell(25, 6, $row['total_transaksi'], 1, 1);
 }
-//output file PDF with name invoice + date + session username
 $pdf->Output('invoice' . date('d-m-Y') . "_" . $_SESSION['username'] . '.pdf', 'D');
 ?>
 
