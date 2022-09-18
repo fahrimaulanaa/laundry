@@ -139,6 +139,9 @@ if (!isset($_SESSION['username'])) {
                             Nama Customer
                         </th>
                         <th class="font-semibold text-sm uppercase px-6 py-4">
+                            Alamat
+                        </th>
+                        <th class="font-semibold text-sm uppercase px-6 py-4">
                             Harga
                         </th>
                         <th class="font-semibold text-sm uppercase px-6 py-4">
@@ -171,6 +174,9 @@ if (!isset($_SESSION['username'])) {
                                     <?php echo $row['nama_customer']; ?>
                                 </td>
                                 <td class="px-6 py-4">
+                                    <?php echo $row['alamat_customer']; ?>
+                                </td>
+                                <td class="px-6 py-4">
                                     <?php echo $row['total_transaksi']; ?>
                                 </td>
                                 <td class="px-6 py-4">
@@ -180,7 +186,7 @@ if (!isset($_SESSION['username'])) {
                                     <?php echo $row['status'] == '' ? 'Belum Diproses' : $row['status']; ?>
                                 </td>
                                 <td class="px-6 py-4">
-                                    <a href="daftar-transaksi.php?id=<?php echo $row['id_transaksi']; ?>" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded" target="blank">Proses</a>
+                                    <a href="tambah-transaksi.php?id=<?php echo $row['id_transaksi'];?>" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded" target="blank">Proses</a>
                                     <a href="batal.php?id=<?php echo $row['id_transaksi']; ?>" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded" target="blank">Batalkan</a>
                                 </td>
                             </tr>
@@ -197,16 +203,3 @@ if (!isset($_SESSION['username'])) {
     </div>
 </body>
 </html>
-<?php
-include "../connect.php";
-if (isset($_GET['id'])) {
-    $id = $_GET['id'];
-    $sql = "UPDATE transaksi SET status = 'diproses' WHERE id_transaksi = '$id'";
-    $result = mysqli_query($koneksi, $sql);
-    if ($result) {
-        echo "<script>alert('Transaksi berhasil diproses!');window.location.href='daftar-transaksi.php';</script>";
-    } else {
-        echo "<script>alert('Transaksi gagal diproses!');window.location.href='daftar-transaksi.php';</script>";
-    }
-}
-?>

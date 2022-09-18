@@ -26,7 +26,7 @@ include "../connect.php";
                     </div>
                     <div class="hidden md:block">
                         <div class="ml-10 flex items-baseline space-x-4">
-                            <a href="header.php" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Dashboard</a>
+                            <a href="dashboard.php" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Dashboard</a>
                             <a href="form-tambah-laundry.php" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Tambah Laundry</a>
                             <a href="data.php" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Tambah Transaksi</a>
                         </div>
@@ -70,14 +70,17 @@ include "../connect.php";
                         $query = "SELECT * FROM $user";
                         $result = mysqli_query($koneksi, $query);
                         $row = mysqli_fetch_assoc($result);
-                        if ($row['status'] == "belum diproses") {
-                            echo "Pesanan anda belum diproses, silahkan tunggu";
-                        } else if ($row['status'] == "diproses") {
-                            echo "Pesanan anda sedang dikerjakan, silahkan tunggu";
-                        } else if ($row['status'] == "selesai") {
-                            echo "Pesanan anda sudah selesai, silahkan diambil";
-                        } else {
+                        if(empty($row)){
                             echo "Tidak ada pesanan";
+                        }else if($row['status'] == "diproses"){
+                            echo "Pesanan anda sedang dalam proses";
+                        }else if($row['status'] == "selesai"){
+                            echo "Pesanan anda sudah selesai";
+                            echo "<br>";
+                            echo "<br>";
+                            echo "<a href='print-invoice.php' class='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'>Print Invoice</a>";
+                        }else if($row['status'] == "belum diproses"){
+                            echo "Pesanan anda belum diproses, silahkan tunggu";
                         }
                         ?>
                     </p>

@@ -28,6 +28,7 @@ while ($row = mysqli_fetch_array($query)) {
     $pdf->Cell(27, 6, $row['berat'], 1, 0);
     $pdf->Cell(25, 6, $row['total_transaksi'], 1, 1);
 }
-$pdf->Output('I', 'Invoice.pdf');
+//output file PDF with name invoice + date + session username
+$pdf->Output('invoice' . date('d-m-Y') . "_" . $_SESSION['username'] . '.pdf', 'D');
 ?>
 

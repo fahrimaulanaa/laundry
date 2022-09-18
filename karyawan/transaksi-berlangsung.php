@@ -127,12 +127,15 @@ include "../connect.php";
 
 if (isset($_GET['id_transaksi'])) {
     $id = $_GET['id_transaksi'];
-    $sql = "UPDATE transaksi SET status = 'selesai' WHERE id_transaksi = '$id'";
-    $result = mysqli_query($koneksi, $sql);
-    if ($result) {
-        header("location:transaksi-berlangsung.php");
+    $user = $_SESSION['username'];
+    $sql1 = "UPDATE transaksi SET status = 'selesai' WHERE id_transaksi = '$id'";
+    $sql2 = "UPDATE user SET status = 'kosong' WHERE username = '$user'";
+    $result1 = mysqli_query($koneksi, $sql1);
+    $result2 = mysqli_query($koneksi, $sql2);
+    if ($result1 && $result2) {
+        echo "<script>alert('Transaksi Berhasil');window.location.href='transaksi-berlangsung.php';</script>";
     } else {
-        echo "Gagal";
+        echo "<script>alert('Transaksi Gagal');window.location.href='transaksi-berlangsung.php';</script>";
     }
 }
 ?>
