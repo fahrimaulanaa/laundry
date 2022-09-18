@@ -11,29 +11,18 @@ $login = mysqli_query($koneksi,"SELECT * from user where username='$username' an
 $cek = mysqli_num_rows($login);
  
 if($cek > 0){
- 
 	$data = mysqli_fetch_assoc($login);
- 
+	$_SESSION['username'] = $username;
+	$_SESSION['level'] = $data['level'];
+	$_SESSION['status'] = "login";
 	if($data['level']=="admin"){
- 
-		$_SESSION['username'] = $username;
-		$_SESSION['level'] = "admin";
-		header("location:../admin/admin-datakaryawan.php");
- 
+		header("location:../admin/dashboard.php");
 	}else if($data['level']=="karyawan"){
-		$_SESSION['username'] = $username;
-		$_SESSION['level'] = "karyawan";
 		header("location:../karyawan/daftar-transaksi.php");
- 
 	}else if($data['level']=="user"){
-		$_SESSION['username'] = $username;
-		$_SESSION['level'] = "user";
 		header("location:../client/dashboard.php");
- 
-	}else{
- 
-		header("location:index.php?pesan=gagal");
-	}	
+	}
 }else{
-	header("location:index.php?pesan=gagal");
+	echo "<script>alert('Username atau Password salah!');window.location='../security/form-login.php'</script>";
+	header("location:../security/form-login.php");
 }

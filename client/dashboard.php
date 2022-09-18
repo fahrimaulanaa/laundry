@@ -1,5 +1,6 @@
 <?php
 session_start();
+$user = $_SESSION['username'];
 include "../connect.php";
 ?>
 <!DOCTYPE html>
@@ -14,6 +15,7 @@ include "../connect.php";
 </head>
 
 <body>
+    <script src="../javascript/index.js"></script>
     <script src="../node_modules/tw-elements/dist/js/index.min.js"></script>
     <nav class="bg-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -57,25 +59,25 @@ include "../connect.php";
     <main>
         <br>
         <br>
-        <div class="flex justify-center">
+        <div class="flex flex-wrap justify-start space-x-5 pl-12">
             <div class="flex flex-col md:flex-row md:max-w-xl rounded-lg bg-white shadow-lg">
-                <img class=" w-full h-96 md:h-auto object-cover md:w-48 rounded-t-lg md:rounded-none md:rounded-l-lg" src="https://mdbootstrap.com/wp-content/uploads/2020/06/vertical.jpg" alt="" />
+                <img class=" w-full h-96 md:h-auto object-cover md:w-48 rounded-t-lg md:rounded-none md:rounded-l-lg" src="../assets/progress_icon.jpg" alt="" />
                 <div class="p-6 flex flex-col justify-start">
                     <h5 class="text-gray-900 text-xl font-bold mb-2 ">Status Pesanan Terbaru</h5>
                     <p class="text-gray-700 text-base mb-4">
-                        <?php $query = mysqli_query($koneksi, "SELECT * FROM transaksi ORDER BY id_transaksi DESC LIMIT 1");
-                        while ($data = mysqli_fetch_array($query)) {
-                            echo "Nama Pelanggan : " . $data['nama_customer'] . "<br>";
-                            echo "Harga : " . $data['total_transaksi'] . "<br>";
-                            echo "Berat Cucian : " . $data['berat'] . "kg". "<br>";
-                            // show current status and if status = selesai then show button to print receipt
-                            if ($data['status'] == "selesai") {
-                                echo "Status : " . $data['status'] . "<br>";
-                                echo "<br>";
-                                echo "<a href='print-invoice.php?id=" . $data['id_transaksi'] . "' class='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'>Print Invoice</a>";
-                            } else {
-                                echo "Status : " . $data['status'] . "<br>";
-                            }
+                        <?php
+                        $user = $_SESSION['username'];
+                        $query = "SELECT * FROM $user";
+                        $result = mysqli_query($koneksi, $query);
+                        $row = mysqli_fetch_assoc($result);
+                        if ($row['status'] == "belum diproses") {
+                            echo "Pesanan anda belum diproses, silahkan tunggu";
+                        } else if ($row['status'] == "diproses") {
+                            echo "Pesanan anda sedang dikerjakan, silahkan tunggu";
+                        } else if ($row['status'] == "selesai") {
+                            echo "Pesanan anda sudah selesai, silahkan diambil";
+                        } else {
+                            echo "Tidak ada pesanan";
                         }
                         ?>
                     </p>
@@ -88,10 +90,50 @@ include "../connect.php";
                     </p>
                 </div>
             </div>
-            <hr>
+            <div class="flex flex-col md:flex-row md:max-w-xl rounded-lg bg-white shadow-lg">
+                <img class=" w-full h-96 md:h-auto object-cover md:w-48 rounded-t-lg md:rounded-none md:rounded-l-lg" src="../assets/cucian_numpuk.jpg" alt="" />
+                <div class="p-6 flex flex-col justify-start">
+                    <h5 class="text-gray-900 text-xl font-bold mb-2 ">Jumlah Pesanan Anda</h5>
+                    <p class="text-gray-700 text-base">
+                        <?php 
+                        $user = $_SESSION['username'];
+                        $query = mysqli_query($koneksi, "SELECT * FROM $user");
+                        $jumlah = mysqli_num_rows($query);
+                        echo "Jumlah Pesanan : " . $jumlah . "<br>";
+                        ?>
+                    </p>
+                    <p class="text-gray-600 text-base">
+                        <?php
+                        $query = mysqli_query($koneksi, "SELECT SUM(total_transaksi) AS total FROM $user");
+                        $data = mysqli_fetch_array($query);
+                        echo "Total Transaksi : Rp. " . $data['total'];
+                        ?>
+                    </p>
+                    <p class="text-gray-600 text-base">
+                        <?php
+                        $query = mysqli_query($koneksi, "SELECT AVG(berat) AS rata FROM $user");
+                        $data = mysqli_fetch_array($query);
+                        echo "Berat Rata Rata : " . $data['rata'] . "kg";
+                        ?>
+                    </p>
+                    <p class="text-gray-600 text-base mb-4">
+                        <?php
+                        $query = mysqli_query($koneksi, "SELECT SUM(berat) AS total FROM $user");
+                        $data = mysqli_fetch_array($query);
+                        echo "Total Berat Dilaundry : " . $data['total'] . "kg";
+                        ?>
+                    </p>
+                    <p class="text-gray-600 text-xs">
+                        <?php
+                        date_default_timezone_set('Asia/Jakarta');
+                        echo "Terakhir Diupdate : " . date(" H:i:s");
+                        ?>
+
+                    </p>
+                </div>
+            </div>
         </div>
         <br>
-
 </body>
 
 </html>

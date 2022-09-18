@@ -14,6 +14,7 @@ include "../connect.php";
 </head>
 
 <body>
+    <script src="../javascript/index.js"></script>
     <nav class="bg-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
@@ -24,7 +25,7 @@ include "../connect.php";
                     <div class="hidden md:block">
                         <div class="ml-10 flex items-baseline space-x-4">
                             <a href="dashboard.php" class=" text-gray-300 px-3 py-2 rounded-md text-sm font-medium" >Dashboard</a>
-                            <a href="profile.php" class="bg-gray-900 text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Tambah Laundry</a>
+                            <a href="form-tambah-laundry.php" class="bg-gray-900 text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Tambah Laundry</a>
                             <a href="data.php" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Tambah Transaksi</a>
                         </div>
                     </div>
@@ -60,10 +61,6 @@ include "../connect.php";
                 <h1 class="text-3xl font-bold text-green-700 pb-6" align="center">Tambah Laundry</h1>
                 <div class="border-4 border-dashed border-gray-200 rounded-lg h-96">
                     <form action="tambah-laundry.php" method="POST">
-                        <div class="flex flex-col">
-                            <label for="nama" class="pb-2">Nama Pelanggan</label>
-                            <input type="text" name="nama_customer" id="nama" class="border-2 border-gray-300 p-2 rounded-lg" placeholder="Masukkan nama pelanggan">
-                        </div>
                         <div class="flex flex-col">
                             <label for="alamat" class="pb-2">Alamat</label>
                             <input type="text" name="alamat_customer" id="alamat" class="border-2 border-gray-300 p-2 rounded-lg" placeholder="Masukkan alamat pelanggan">

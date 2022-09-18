@@ -40,7 +40,7 @@ if (isset($_SESSION['level'])) {
                     <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded font-medium w-full" name="login">Login</button>
                 </div>
                 <hr>
-                <p class="mt-5">Don't have an account? <a href="register.php" class="text-blue-700 font-bold">Register</a></p>
+                <p class="mt-5">Don't have an account? <a href="form-signup.php" class="text-blue-700 font-bold">Register</a></p>
             </form>
         </div>
     </div>
