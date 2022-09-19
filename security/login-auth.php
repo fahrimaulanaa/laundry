@@ -16,7 +16,7 @@ if($cek > 0){
 	$_SESSION['level'] = $data['level'];
 	$_SESSION['status'] = "login";
 	if($data['level']=="admin"){
-		header("location:../admin/dashboard.php");
+		header("location:../admin/admin-datakaryawan.php");
 	}else if($data['level']=="karyawan"){
 		header("location:../karyawan/daftar-transaksi.php");
 	}else if($data['level']=="user"){

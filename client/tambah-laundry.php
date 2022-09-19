@@ -10,8 +10,8 @@ if (isset($_POST['submit'])) {
     $harga = $berat * 3000;
     $tanggal_transaksi = date("Y-m-d");
     $status = "belum diproses";
-    $query = "INSERT INTO transaksi VALUES ('','$tanggal_transaksi','$harga','$berat','$status','$nama','$alamat','$nohp')";
-    $query2 = "INSERT INTO $user VALUES ('','$tanggal_transaksi','$harga','$berat','$status','$nama','$alamat','$nohp')";
+    $query = "INSERT INTO transaksi VALUES ('', '$nama', '$alamat', '$nohp', '$berat', '$harga', '$tanggal_transaksi', '$status')";
+    $query2 = "INSERT INTO $user VALUES ('', '$nama', '$alamat', '$nohp', '$berat', '$harga', '$tanggal_transaksi', '$status')";
     $result = mysqli_query($koneksi, $query);
     $result2 = mysqli_query($koneksi, $query2);
     if ($result && $result2) {

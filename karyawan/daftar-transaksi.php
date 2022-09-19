@@ -3,7 +3,6 @@ session_start();
 include "../connect.php";
 include "header.php";
 
-// if user is not have session, redirect to login page
 if (!isset($_SESSION['username'])) {
     header('location:../security/form-login.php');
 }

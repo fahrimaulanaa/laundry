@@ -63,19 +63,19 @@ include "../connect.php";
                     <form action="tambah-laundry.php" method="POST">
                         <div class="flex flex-col">
                             <label for="alamat" class="pb-2">Alamat</label>
-                            <input type="text" name="alamat_customer" id="alamat" class="border-2 border-gray-300 p-2 rounded-lg" placeholder="Masukkan alamat pelanggan">
+                            <input type="text" name="alamat_customer" id="alamat" class="border-2 border-gray-300 p-2 rounded-lg form-input" placeholder="Masukkan alamat pelanggan">
                         </div>
                         <div class="flex flex-col">
                             <label for="nohp" class="pb-2">No. HP</label>
-                            <input type="text" name="telefon_customer" id="nohp" class="border-2 border-gray-300 p-2 rounded-lg" placeholder="Masukkan no. hp pelanggan">
+                            <input type="text" name="telefon_customer" id="nohp" class="border-2 border-gray-300 p-2 rounded-lg form-input" placeholder="Masukkan no. hp pelanggan">
                         </div>
                         <div class="flex flex-col">
                             <label for="berat" class="pb-2">Berat</label>
-                            <input type="text" name="berat" id="berat" class="border-2 border-gray-300 p-2 rounded-lg" placeholder="Masukkan berat laundry">
+                            <input type="text" name="berat" id="berat" class="border-2 border-gray-300 p-2 rounded-lg form-input" placeholder="Masukkan berat laundry">
                         </div>
                         <div class="flex flex-col">
                             <label for="harga" class="pb-2">Harga</label>
-                            <input type="text" name="total_transaksi" id="harga" class="border-2 border-gray-300 p-2 rounded-lg" placeholder="Harga" readonly>
+                            <input type="text" name="total_transaksi" id="harga" class="border-2 border-gray-300 p-2 rounded-lg form-input" placeholder="Harga" readonly>
                         </div>
                         <br>
                         <div class="flex flex-row">

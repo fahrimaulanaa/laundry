@@ -3,7 +3,7 @@ session_start();
 include "../connect.php";
 
 if ($_SESSION['level'] == "admin") {
-    header("location:../admin/dashboard.php");
+    echo "<script>alert('Selamat Login Admin')</script>";
 }else if($_SESSION['level'] == "karyawan"){
     header("location:../karyawan/daftar-transaksi.php");
 }else if($_SESSION['level'] == "user"){

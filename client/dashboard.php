@@ -1,5 +1,6 @@
 <?php
 session_start();
+session_id();
 $user = $_SESSION['username'];
 include "../connect.php";
 
@@ -63,7 +64,7 @@ if (!isset($_SESSION['username'])) {
     <main>
         <br>
         <br>
-        <div class="flex flex-wrap justify-start space-x-5 pl-12">
+        <div class="flex flex-wrap justify-start space-x-5 pl-12 sm:block">
             <div class="flex flex-col md:flex-row md:max-w-xl rounded-lg bg-white shadow-lg">
                 <img class=" w-full h-96 md:h-auto object-cover md:w-48 rounded-t-lg md:rounded-none md:rounded-l-lg" src="../assets/progress_icon.jpg" alt="" />
                 <div class="p-6 flex flex-col justify-start">
