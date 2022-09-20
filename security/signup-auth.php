@@ -7,6 +7,7 @@ if (isset($_POST['submit'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
     $level = "user";
+    $tanggal_daftar = date("Y-m-d");
     $query = "INSERT INTO user VALUES ('$id','$nama','$username', '$password', '$level')";
     $result = mysqli_query($koneksi, $query);
     $query2 = "CREATE TABLE $username (
@@ -18,6 +19,7 @@ if (isset($_POST['submit'])) {
         nama_customer VARCHAR(50) NOT NULL,
         alamat_customer VARCHAR(100) NOT NULL,
         telefon_customer VARCHAR(20) NOT NULL,
+        tanggal_dafar DATE NOT NULL,
         PRIMARY KEY (id_transaksi)
     )";
     $result2 = mysqli_query($koneksi, $query2);

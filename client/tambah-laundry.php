@@ -11,12 +11,11 @@ if (isset($_POST['submit'])) {
     $tanggal_transaksi = date("Y-m-d");
     $status = "belum diproses";
     $query = "INSERT INTO transaksi VALUES ('', '$nama', '$alamat', '$nohp', '$berat', '$harga', '$tanggal_transaksi', '$status')";
-    $query2 = "INSERT INTO $user VALUES ('', '$nama', '$alamat', '$nohp', '$berat', '$harga', '$tanggal_transaksi', '$status')";
+    $query2 = "INSERT INTO $user VALUES ('', '$tanggal_transaksi', '$harga', '$berat', '$status', '$nama', '$alamat', '$nohp')";
     $result = mysqli_query($koneksi, $query);
     $result2 = mysqli_query($koneksi, $query2);
     if ($result && $result2) {
-        echo "<script>alert('Data berhasil ditambahkan!')</script>";
-        echo "<script>location.href='dashboard.php'</script>";
+        echo "<script>alert('Pesanan Berhasil Ditambahkan'); window.location = 'dashboard.php';</script>";
     } else {
         echo "<script>alert('Data gagal ditambahkan!')</script>";
     }
