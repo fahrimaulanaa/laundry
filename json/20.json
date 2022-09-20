@@ -1,0 +1,802 @@
+[
+  {
+    "foto_smk": "",
+    "nama": "1. MUHAMMAD IMAS BAYU RADITYA",
+    "jam": "04:31:37",
+    "id_kelas": "xt3",
+    "nama_kelas": "X",
+    "kelompok": "TKJ3"
+  },
+  {
+    "foto_smk": "",
+    "nama": "2. AARONINO AULIA PSIANDY ALFARIZKY",
+    "jam": "04:39:13",
+    "id_kelas": "xt2",
+    "nama_kelas": "X",
+    "kelompok": "TKJ2"
+  },
+  {
+    "foto_smk": "",
+    "nama": "3. MUHAMMAD ROSYID QOLBILHAM ASH SHOF",
+    "jam": "04:41:50",
+    "id_kelas": "xt3",
+    "nama_kelas": "X",
+    "kelompok": "TKJ3"
+  },
+  {
+    "foto_smk": "",
+    "nama": "4. MUHAMMAD FUAD JA'FAR ALI",
+    "jam": "04:42:13",
+    "id_kelas": "xt4",
+    "nama_kelas": "X",
+    "kelompok": "TKJ4"
+  },
+  {
+    "foto_smk": "",
+    "nama": "5. AUREL APRILA ATTA YUANA PUTRI",
+    "jam": "04:45:41",
+    "id_kelas": "xt4",
+    "nama_kelas": "X",
+    "kelompok": "TKJ4"
+  },
+  {
+    "foto_smk": "",
+    "nama": "6. NAZMA FAIRUZ MAHARGA",
+    "jam": "04:45:48",
+    "id_kelas": "xt4",
+    "nama_kelas": "X",
+    "kelompok": "TKJ4"
+  },
+  {
+    "foto_smk": "",
+    "nama": "7. Daffa Dioktova Putra",
+    "jam": "04:45:57",
+    "id_kelas": "xt4",
+    "nama_kelas": "X",
+    "kelompok": "TKJ4"
+  },
+  {
+    "foto_smk": "",
+    "nama": "8. MIRZA MUHAMMAD NAFIS",
+    "jam": "04:46:04",
+    "id_kelas": "xr3",
+    "nama_kelas": "X",
+    "kelompok": "RPL3"
+  },
+  {
+    "foto_smk": "",
+    "nama": "9. Huda Maulana Akbar",
+    "jam": "04:46:15",
+    "id_kelas": "xt3",
+    "nama_kelas": "X",
+    "kelompok": "TKJ3"
+  },
+  {
+    "foto_smk": "",
+    "nama": "10. ANATA BUDI AYUNI",
+    "jam": "04:47:22",
+    "id_kelas": "xir3",
+    "nama_kelas": "XI",
+    "kelompok": "RPL3"
+  },
+  {
+    "foto_smk": "FLox4VwVEAEE2Z0.jpg",
+    "nama": "11. RIFALINA DESINTA NANDARI",
+    "jam": "04:48:15",
+    "id_kelas": "xir3",
+    "nama_kelas": "XI",
+    "kelompok": "RPL3"
+  },
+  {
+    "foto_smk": "",
+    "nama": "12. MEIVA YUSNITA AMALIA W. K.",
+    "jam": "04:48:22",
+    "id_kelas": "xir4",
+    "nama_kelas": "XI",
+    "kelompok": "RPL4"
+  },
+  {
+    "foto_smk": "",
+    "nama": "13. REVA ADNANDA RIVERA",
+    "jam": "04:48:41",
+    "id_kelas": "xt4",
+    "nama_kelas": "X",
+    "kelompok": "TKJ4"
+  },
+  {
+    "foto_smk": "PhotoRoom-20220628_161448.png",
+    "nama": "14. MUH.ANANDITO PALAWARUKKA",
+    "jam": "04:48:57",
+    "id_kelas": "xt3",
+    "nama_kelas": "X",
+    "kelompok": "TKJ3"
+  },
+  {
+    "foto_smk": "",
+    "nama": "15. ORIBEL RENATA GERALDINE",
+    "jam": "04:49:27",
+    "id_kelas": "xt3",
+    "nama_kelas": "X",
+    "kelompok": "TKJ3"
+  },
+  {
+    "foto_smk": "",
+    "nama": "16. PANDU PUTRAKELANA GINTING",
+    "jam": "04:49:39",
+    "id_kelas": "xir3",
+    "nama_kelas": "XI",
+    "kelompok": "RPL3"
+  },
+  {
+    "foto_smk": "Profile_Picture_2.png",
+    "nama": "17. MUHAMMAD ISMI RAFIE HADAYA ALZAH",
+    "jam": "04:49:58",
+    "id_kelas": "xt4",
+    "nama_kelas": "X",
+    "kelompok": "TKJ4"
+  },
+  {
+    "foto_smk": "",
+    "nama": "18. Rafi Kurniawan Yogananda",
+    "jam": "04:50:04",
+    "id_kelas": "xir4",
+    "nama_kelas": "XI",
+    "kelompok": "RPL4"
+  },
+  {
+    "foto_smk": "",
+    "nama": "19. Rodrigues Raka Suma Pratama",
+    "jam": "04:51:04",
+    "id_kelas": "xt4",
+    "nama_kelas": "X",
+    "kelompok": "TKJ4"
+  },
+  {
+    "foto_smk": "",
+    "nama": "20. NISMARA SYAHDA NABILAH RAMADHANI",
+    "jam": "04:52:34",
+    "id_kelas": "xir3",
+    "nama_kelas": "XI",
+    "kelompok": "RPL3"
+  },
+  {
+    "foto_smk": "",
+    "nama": "21. HAZEL ZANI RATU DINAYAH",
+    "jam": "04:53:32",
+    "id_kelas": "xt4",
+    "nama_kelas": "X",
+    "kelompok": "TKJ4"
+  },
+  {
+    "foto_smk": "",
+    "nama": "22. NAYLA AGNESIA WIDIYA PUTRI",
+    "jam": "04:53:36",
+    "id_kelas": "xir3",
+    "nama_kelas": "XI",
+    "kelompok": "RPL3"
+  },
+  {
+    "foto_smk": "",
+    "nama": "23. ALIFIAH FIRDIATURROSYIDAH",
+    "jam": "04:53:45",
+    "id_kelas": "xt4",
+    "nama_kelas": "X",
+    "kelompok": "TKJ4"
+  },
+  {
+    "foto_smk": "",
+    "nama": "24. SULTAN ACHMAD ARYAMUKTI",
+    "jam": "04:53:47",
+    "id_kelas": "xt3",
+    "nama_kelas": "X",
+    "kelompok": "TKJ3"
+  },
+  {
+    "foto_smk": "",
+    "nama": "25. MAHESA SATRIA KAYANA UNTARA",
+    "jam": "04:54:01",
+    "id_kelas": "xt5",
+    "nama_kelas": "X",
+    "kelompok": "TKJ5"
+  },
+  {
+    "foto_smk": "jeno1.jpg",
+    "nama": "26. ZAHRA NADYA RISTYA ALMASYA",
+    "jam": "04:54:06",
+    "id_kelas": "xt3",
+    "nama_kelas": "X",
+    "kelompok": "TKJ3"
+  },
+  {
+    "foto_smk": "",
+    "nama": "27. MUHAMMAD FAKHRIL AINUR RIDLO",
+    "jam": "04:54:17",
+    "id_kelas": "xir3",
+    "nama_kelas": "XI",
+    "kelompok": "RPL3"
+  },
+  {
+    "foto_smk": "",
+    "nama": "28. RAKHA PUTERA NARAYA",
+    "jam": "04:54:21",
+    "id_kelas": "xir4",
+    "nama_kelas": "XI",
+    "kelompok": "RPL4"
+  },
+  {
+    "foto_smk": "MPLS_Angkatan_30(2).jpg",
+    "nama": "29. NYOMAN BAYU SURAPATI",
+    "jam": "04:54:27",
+    "id_kelas": "xir4",
+    "nama_kelas": "XI",
+    "kelompok": "RPL4"
+  },
+  {
+    "foto_smk": "",
+    "nama": "30. TALITHA FELICIA DANELLA",
+    "jam": "04:54:46",
+    "id_kelas": "xt4",
+    "nama_kelas": "X",
+    "kelompok": "TKJ4"
+  },
+  {
+    "foto_smk": "sus.jpg",
+    "nama": "31. ACHMAD REZA SUBKHAN",
+    "jam": "04:55:02",
+    "id_kelas": "xir4",
+    "nama_kelas": "XI",
+    "kelompok": "RPL4"
+  },
+  {
+    "foto_smk": "",
+    "nama": "32. ALDIN DAFA KUSUMA",
+    "jam": "04:55:28",
+    "id_kelas": "xt3",
+    "nama_kelas": "X",
+    "kelompok": "TKJ3"
+  },
+  {
+    "foto_smk": "Wong_icon1.jpg",
+    "nama": "33. FAHRI MAULANA AL GHAZALI",
+    "jam": "04:56:00",
+    "id_kelas": "xir3",
+    "nama_kelas": "XI",
+    "kelompok": "RPL3"
+  },
+  {
+    "foto_smk": "",
+    "nama": "34. KHALILULLAH NURAINI",
+    "jam": "04:56:19",
+    "id_kelas": "xir4",
+    "nama_kelas": "XI",
+    "kelompok": "RPL4"
+  },
+  {
+    "foto_smk": "",
+    "nama": "35. AHMAD YUSUF NUR WAHID",
+    "jam": "04:56:50",
+    "id_kelas": "xr8",
+    "nama_kelas": "X",
+    "kelompok": "RPL8"
+  },
+  {
+    "foto_smk": "",
+    "nama": "36. NAURA ARTANTI",
+    "jam": "04:57:24",
+    "id_kelas": "xt3",
+    "nama_kelas": "X",
+    "kelompok": "TKJ3"
+  },
+  {
+    "foto_smk": "",
+    "nama": "37. MAYSHA PRIKA ALIFIANTA",
+    "jam": "04:58:26",
+    "id_kelas": "xt4",
+    "nama_kelas": "X",
+    "kelompok": "TKJ4"
+  },
+  {
+    "foto_smk": "",
+    "nama": "38. ASRI NURHAYATI HAKIM",
+    "jam": "04:58:46",
+    "id_kelas": "xt3",
+    "nama_kelas": "X",
+    "kelompok": "TKJ3"
+  },
+  {
+    "foto_smk": "",
+    "nama": "39. EKA ZAKHI ISTIYAWAN",
+    "jam": "04:58:51",
+    "id_kelas": "xt4",
+    "nama_kelas": "X",
+    "kelompok": "TKJ4"
+  },
+  {
+    "foto_smk": "",
+    "nama": "40. FAILASA SYAHDIN AZZAHRA",
+    "jam": "04:58:54",
+    "id_kelas": "xt3",
+    "nama_kelas": "X",
+    "kelompok": "TKJ3"
+  },
+  {
+    "foto_smk": "",
+    "nama": "41. MUHAMMAD AINURIYANSYAH ANBYA YUSUF",
+    "jam": "04:58:56",
+    "id_kelas": "xir3",
+    "nama_kelas": "XI",
+    "kelompok": "RPL3"
+  },
+  {
+    "foto_smk": "",
+    "nama": "42. ANRIZAL SYAFII",
+    "jam": "04:59:19",
+    "id_kelas": "xt4",
+    "nama_kelas": "X",
+    "kelompok": "TKJ4"
+  },
+  {
+    "foto_smk": "",
+    "nama": "43. Muhammad Rafif Hakim Athallah",
+    "jam": "04:59:51",
+    "id_kelas": "xir4",
+    "nama_kelas": "XI",
+    "kelompok": "RPL4"
+  },
+  {
+    "foto_smk": "",
+    "nama": "44. MUHAMMAD FONDA RASENDRIA",
+    "jam": "05:00:45",
+    "id_kelas": "xir4",
+    "nama_kelas": "XI",
+    "kelompok": "RPL4"
+  },
+  {
+    "foto_smk": "",
+    "nama": "45. RAIHAN GARIN DWI SAPUTRA",
+    "jam": "05:00:51",
+    "id_kelas": "xir3",
+    "nama_kelas": "XI",
+    "kelompok": "RPL3"
+  },
+  {
+    "foto_smk": "",
+    "nama": "46. ABYAN NAUFAL RAMADHAN",
+    "jam": "05:00:55",
+    "id_kelas": "xt4",
+    "nama_kelas": "X",
+    "kelompok": "TKJ4"
+  },
+  {
+    "foto_smk": "",
+    "nama": "47. SHALOM CHELSEA AITANA BECHTRYANTO",
+    "jam": "05:01:02",
+    "id_kelas": "xir3",
+    "nama_kelas": "XI",
+    "kelompok": "RPL3"
+  },
+  {
+    "foto_smk": "",
+    "nama": "48. Muhammad Pasha Athallah Mulyadi",
+    "jam": "05:01:16",
+    "id_kelas": "xr8",
+    "nama_kelas": "X",
+    "kelompok": "RPL8"
+  },
+  {
+    "foto_smk": "",
+    "nama": "49. FATTURAKHMAN AL GHOZY ADITYA",
+    "jam": "05:01:24",
+    "id_kelas": "xr4",
+    "nama_kelas": "X",
+    "kelompok": "RPL4"
+  },
+  {
+    "foto_smk": "",
+    "nama": "50. Tegar Wahyu Hadi Saputra",
+    "jam": "05:01:24",
+    "id_kelas": "xt1",
+    "nama_kelas": "X",
+    "kelompok": "TKJ1"
+  },
+  {
+    "foto_smk": "",
+    "nama": "51. TEGAR SYAWLA AKBAR",
+    "jam": "05:01:33",
+    "id_kelas": "xir4",
+    "nama_kelas": "XI",
+    "kelompok": "RPL4"
+  },
+  {
+    "foto_smk": "",
+    "nama": "52. KANSA RAAFI SASMITO",
+    "jam": "05:01:36",
+    "id_kelas": "xt3",
+    "nama_kelas": "X",
+    "kelompok": "TKJ3"
+  },
+  {
+    "foto_smk": "",
+    "nama": "53. FAISYA ANINDYA SHAFAH",
+    "jam": "05:01:39",
+    "id_kelas": "xt4",
+    "nama_kelas": "X",
+    "kelompok": "TKJ4"
+  },
+  {
+    "foto_smk": "",
+    "nama": "54. Bertram Hazel Adinata",
+    "jam": "05:01:45",
+    "id_kelas": "xt3",
+    "nama_kelas": "X",
+    "kelompok": "TKJ3"
+  },
+  {
+    "foto_smk": "",
+    "nama": "55. RIDHO FAHREZA FIRZANSYAHRUL PUTRA SURYA",
+    "jam": "05:01:46",
+    "id_kelas": "xt4",
+    "nama_kelas": "X",
+    "kelompok": "TKJ4"
+  },
+  {
+    "foto_smk": "",
+    "nama": "56. BUNGA WIDYATNA WICAKSONO",
+    "jam": "05:02:20",
+    "id_kelas": "xt3",
+    "nama_kelas": "X",
+    "kelompok": "TKJ3"
+  },
+  {
+    "foto_smk": "",
+    "nama": "57. FADIL MOHAMMAD",
+    "jam": "05:02:32",
+    "id_kelas": "xir3",
+    "nama_kelas": "XI",
+    "kelompok": "RPL3"
+  },
+  {
+    "foto_smk": "",
+    "nama": "58. Muhammad Faiz Zaidan",
+    "jam": "05:02:36",
+    "id_kelas": "xt5",
+    "nama_kelas": "X",
+    "kelompok": "TKJ5"
+  },
+  {
+    "foto_smk": "",
+    "nama": "59. Gyda Ahla Prabowo",
+    "jam": "05:02:46",
+    "id_kelas": "xt4",
+    "nama_kelas": "X",
+    "kelompok": "TKJ4"
+  },
+  {
+    "foto_smk": "",
+    "nama": "60. THORIQ ARROFIF",
+    "jam": "05:03:22",
+    "id_kelas": "xir4",
+    "nama_kelas": "XI",
+    "kelompok": "RPL4"
+  },
+  {
+    "foto_smk": "",
+    "nama": "61. CAHYA FOUREN SEVILAUNA",
+    "jam": "05:03:25",
+    "id_kelas": "xt4",
+    "nama_kelas": "X",
+    "kelompok": "TKJ4"
+  },
+  {
+    "foto_smk": "IMG_20220711_125349.jpg",
+    "nama": "62. Varian Revel Sanjaya",
+    "jam": "05:04:03",
+    "id_kelas": "xt4",
+    "nama_kelas": "X",
+    "kelompok": "TKJ4"
+  },
+  {
+    "foto_smk": "",
+    "nama": "63. ZILDAN OLIVIAN MEILANO EFENDI",
+    "jam": "05:04:07",
+    "id_kelas": "xt3",
+    "nama_kelas": "X",
+    "kelompok": "TKJ3"
+  },
+  {
+    "foto_smk": "WhatsApp_Image_2022-02-18_at_10.44_.38_.jpeg",
+    "nama": "64. AVELYA MASBAHTIANA",
+    "jam": "05:04:17",
+    "id_kelas": "xir4",
+    "nama_kelas": "XI",
+    "kelompok": "RPL4"
+  },
+  {
+    "foto_smk": "",
+    "nama": "65. Mohammad Taufiqurrohman",
+    "jam": "05:04:46",
+    "id_kelas": "xt4",
+    "nama_kelas": "X",
+    "kelompok": "TKJ4"
+  },
+  {
+    "foto_smk": "DSCF46121.JPG",
+    "nama": "66. MOH. AUFA AZKA FABIAN",
+    "jam": "05:05:09",
+    "id_kelas": "xir3",
+    "nama_kelas": "XI",
+    "kelompok": "RPL3"
+  },
+  {
+    "foto_smk": "20812f7c-e220-4041-b291-0d111397fc85.jpg",
+    "nama": "67. MOHAMMAD NABIL KHARIRI",
+    "jam": "05:05:32",
+    "id_kelas": "xr5",
+    "nama_kelas": "X",
+    "kelompok": "RPL5"
+  },
+  {
+    "foto_smk": "Chizuru_aesthetic_corp.jpg",
+    "nama": "68. Muhammad Reyhan Asahy",
+    "jam": "05:05:38",
+    "id_kelas": "xr5",
+    "nama_kelas": "X",
+    "kelompok": "RPL5"
+  },
+  {
+    "foto_smk": "",
+    "nama": "69. AREL NATHAN FULVIAN",
+    "jam": "05:05:41",
+    "id_kelas": "xt2",
+    "nama_kelas": "X",
+    "kelompok": "TKJ2"
+  },
+  {
+    "foto_smk": "",
+    "nama": "70. Rizky Zulham Syah",
+    "jam": "05:06:00",
+    "id_kelas": "xt4",
+    "nama_kelas": "X",
+    "kelompok": "TKJ4"
+  },
+  {
+    "foto_smk": "KR_Ex-aid_Emu_chibi.jpg",
+    "nama": "71. Fauzan Farhan Al Qodri Irawan",
+    "jam": "05:06:07",
+    "id_kelas": "xir5",
+    "nama_kelas": "XI",
+    "kelompok": "RPL5"
+  },
+  {
+    "foto_smk": "WhatsApp_Image_2022-07-25_at_8.05_.39_AM_1.jpeg",
+    "nama": "72. ABDUL AZIZ IKHSAN ARSYA",
+    "jam": "05:06:16",
+    "id_kelas": "xr1",
+    "nama_kelas": "X",
+    "kelompok": "RPL1"
+  },
+  {
+    "foto_smk": "Screenshot_20220714-181206_Instagram.jpg",
+    "nama": "73. Direngga Bintang Saputra",
+    "jam": "05:07:14",
+    "id_kelas": "xt3",
+    "nama_kelas": "X",
+    "kelompok": "TKJ3"
+  },
+  {
+    "foto_smk": "IMG_20220717_192052_465.jpg",
+    "nama": "74. MAHDI NAYAKA KURNIADI",
+    "jam": "05:07:19",
+    "id_kelas": "xt4",
+    "nama_kelas": "X",
+    "kelompok": "TKJ4"
+  },
+  {
+    "foto_smk": "",
+    "nama": "75. NAZWA ALYA MAUSHILY",
+    "jam": "05:07:34",
+    "id_kelas": "xir4",
+    "nama_kelas": "XI",
+    "kelompok": "RPL4"
+  },
+  {
+    "foto_smk": "IMG20211023144250.jpg",
+    "nama": "76. GREENAURA NATHARINA SUNARDI",
+    "jam": "05:09:11",
+    "id_kelas": "xt3",
+    "nama_kelas": "X",
+    "kelompok": "TKJ3"
+  },
+  {
+    "foto_smk": "",
+    "nama": "77. DEA AMEILYA CALLISTA",
+    "jam": "05:09:14",
+    "id_kelas": "xt3",
+    "nama_kelas": "X",
+    "kelompok": "TKJ3"
+  },
+  {
+    "foto_smk": "",
+    "nama": "78. ZACHARIA ANANTA WIJAYA",
+    "jam": "05:09:16",
+    "id_kelas": "xit1",
+    "nama_kelas": "XI",
+    "kelompok": "TKJ1"
+  },
+  {
+    "foto_smk": "",
+    "nama": "79. LYTA MITRA CAHYANI",
+    "jam": "05:09:20",
+    "id_kelas": "xt3",
+    "nama_kelas": "X",
+    "kelompok": "TKJ3"
+  },
+  {
+    "foto_smk": "",
+    "nama": "80. RAFIF DHAIFULLOH MUSYAFFA KUMORO",
+    "jam": "05:09:27",
+    "id_kelas": "xt4",
+    "nama_kelas": "X",
+    "kelompok": "TKJ4"
+  },
+  {
+    "foto_smk": "",
+    "nama": "81. MUHAMMAD NOUVAL RAFIF RABANI",
+    "jam": "05:09:38",
+    "id_kelas": "xt4",
+    "nama_kelas": "X",
+    "kelompok": "TKJ4"
+  },
+  {
+    "foto_smk": "",
+    "nama": "82. ANANDA BAGAS KENZIE LIVIANO",
+    "jam": "05:11:37",
+    "id_kelas": "xir3",
+    "nama_kelas": "XI",
+    "kelompok": "RPL3"
+  },
+  {
+    "foto_smk": "",
+    "nama": "83. FATIH SHOLAHUDDIN",
+    "jam": "05:13:00",
+    "id_kelas": "xit3",
+    "nama_kelas": "XI",
+    "kelompok": "TKJ3"
+  },
+  {
+    "foto_smk": "IMG_20220410_171140_863.jpg",
+    "nama": "84. ZIDAN MAULANA HIDAYATULLAH",
+    "jam": "05:13:32",
+    "id_kelas": "xr6",
+    "nama_kelas": "X",
+    "kelompok": "RPL6"
+  },
+  {
+    "foto_smk": "IMG_20211029_174920_311.png",
+    "nama": "85. Divannisa Aureldo Tolle",
+    "jam": "05:14:02",
+    "id_kelas": "xr3",
+    "nama_kelas": "X",
+    "kelompok": "RPL3"
+  },
+  {
+    "foto_smk": "",
+    "nama": "86. META AMALIA",
+    "jam": "05:14:45",
+    "id_kelas": "xr7",
+    "nama_kelas": "X",
+    "kelompok": "RPL7"
+  },
+  {
+    "foto_smk": "",
+    "nama": "87. AGNIA AISYATUL FATDILAH",
+    "jam": "05:14:46",
+    "id_kelas": "xt2",
+    "nama_kelas": "X",
+    "kelompok": "TKJ2"
+  },
+  {
+    "foto_smk": "",
+    "nama": "88. BINTANG RAYYAN",
+    "jam": "05:14:52",
+    "id_kelas": "xr7",
+    "nama_kelas": "X",
+    "kelompok": "RPL7"
+  },
+  {
+    "foto_smk": "",
+    "nama": "89. ADDONIS RAMADHANA NURMANSYAH",
+    "jam": "05:15:48",
+    "id_kelas": "xir3",
+    "nama_kelas": "XI",
+    "kelompok": "RPL3"
+  },
+  {
+    "foto_smk": "Screenshot_20220729-224325_Gallery.jpg",
+    "nama": "90. RHAFFINO ABDI PERMANA",
+    "jam": "05:15:54",
+    "id_kelas": "xt3",
+    "nama_kelas": "X",
+    "kelompok": "TKJ3"
+  },
+  {
+    "foto_smk": "",
+    "nama": "91. Farel Putra Prateta Aidzil Akbar",
+    "jam": "05:16:37",
+    "id_kelas": "xr7",
+    "nama_kelas": "X",
+    "kelompok": "RPL7"
+  },
+  {
+    "foto_smk": "",
+    "nama": "92. ASTRIDIA VERONIC ZONNA BASUKI",
+    "jam": "05:17:02",
+    "id_kelas": "xit2",
+    "nama_kelas": "XI",
+    "kelompok": "TKJ2"
+  },
+  {
+    "foto_smk": "webcam-toy-photo6.jpg",
+    "nama": "93. AGATHA SABDA ALETHEA PRABAWA",
+    "jam": "05:17:25",
+    "id_kelas": "xt4",
+    "nama_kelas": "X",
+    "kelompok": "TKJ4"
+  },
+  {
+    "foto_smk": "",
+    "nama": "94. ANEIRA ZARIN ABDILA KHOIRUNIZA'",
+    "jam": "05:17:42",
+    "id_kelas": "xr7",
+    "nama_kelas": "X",
+    "kelompok": "RPL7"
+  },
+  {
+    "foto_smk": "Butterfly_4K.jpg",
+    "nama": "95. FARIL BINTANG PRAMUDYA",
+    "jam": "05:18:14",
+    "id_kelas": "xr8",
+    "nama_kelas": "X",
+    "kelompok": "RPL8"
+  },
+  {
+    "foto_smk": "IMG_20220725_053455_364.jpg",
+    "nama": "96. MUHAMMAD ALIIFIL QODRI VANOZA ARABY",
+    "jam": "05:18:28",
+    "id_kelas": "xt1",
+    "nama_kelas": "X",
+    "kelompok": "TKJ1"
+  },
+  {
+    "foto_smk": "",
+    "nama": "97. BINTANG RISQI AKBAR WIDARGO",
+    "jam": "05:18:33",
+    "id_kelas": "xr8",
+    "nama_kelas": "X",
+    "kelompok": "RPL8"
+  },
+  {
+    "foto_smk": "",
+    "nama": "98. Cantik Prameswari",
+    "jam": "05:19:07",
+    "id_kelas": "xr3",
+    "nama_kelas": "X",
+    "kelompok": "RPL3"
+  },
+  {
+    "foto_smk": "FB_IMG_1651399254480.jpg",
+    "nama": "99. ORYZA VALENDIO",
+    "jam": "05:19:43",
+    "id_kelas": "xir3",
+    "nama_kelas": "XI",
+    "kelompok": "RPL3"
+  },
+  {
+    "foto_smk": "",
+    "nama": "100. RIVALDO RIZKY HABIBIE",
+    "jam": "05:20:28",
+    "id_kelas": "xr6",
+    "nama_kelas": "X",
+    "kelompok": "RPL6"
+  }
+]

@@ -28,8 +28,8 @@ if (!isset($_SESSION['username'])) {
         </div>
         <div class="sidebar bg-gray-800 text-gray-100 w-64 space-y-6 py-7 px-2 hidden md:block">
             <a href="dashboard.php" class="text-white block p-4 font-bold">Admin Panel</a>
-            <a href="#" class="text-white opacity-100 block p-4 hover:bg-gray-700 hover:text-white transition duration-300 ease-in-out font-bold">Dashboard</a>
-            <a href="#" class="block p-4 hover:bg-gray-700 hover:text-white transition duration-300 ease-in-out">Users</a>
+            <a href="dashboard.php" class="text-white opacity-100 block p-4 hover:bg-gray-700 hover:text-white transition duration-300 ease-in-out font-bold">Dashboard</a>
+            <a href="supply.php" class="block p-4 hover:bg-gray-700 hover:text-white transition duration-300 ease-in-out">Supply</a>
             <a href="#" class="block p-4 hover:bg-gray-700 hover:text-white transition duration-300 ease-in-out">Products</a>
             <a href="#" class="block p-4 hover:bg-gray-700 hover:text-white transition duration-300 ease-in-out">Orders</a>
             <a href="#" class="block p-4 hover:bg-gray-700 hover:text-white transition duration-300 ease-in-out">Settings</a>
